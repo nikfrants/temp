@@ -14,6 +14,7 @@ logging.basicConfig(
 )
 
 
+
 class ExcelManager:
     """Класс для управления Excel-файлами с использованием xlwings."""
 

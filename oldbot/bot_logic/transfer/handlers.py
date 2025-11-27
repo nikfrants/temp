@@ -11,23 +11,23 @@ from aiogram.utils.markdown import hbold
 from aiogram.filters import Command  # ИСПРАВЛЕНИЕ: Добавлен импорт Command
 
 # Импорты для FSM
-from bot_logic.transfer.fsm import TransferFSM
-from bot_logic.registration.fsm import RegistrationFSM
-from bot_logic.common.fsm import CommonFSM
+from oldbot.bot_logic.transfer.fsm import TransferFSM
+from oldbot.bot_logic.registration.fsm import RegistrationFSM
+from oldbot.bot_logic.common.fsm import CommonFSM
 
 # Импорты для клавиатур
-from bot_logic.transfer import keyboards as transfer_kb
-from bot_logic.common import keyboards as common_kb
-from bot_logic.registration import keyboards as registration_kb
+from oldbot.bot_logic.transfer import keyboards as transfer_kb
+from oldbot.bot_logic.common import keyboards as common_kb
+from oldbot.bot_logic.registration import keyboards as registration_kb
 
 # Импорты для базы данных
-from database import db_stubs
+from oldbot.database import db_stubs
 
 # Импорт конфигурации трансфера
-from bot_logic.transfer.config import TRANSFER_CONFIG as config
+from oldbot.bot_logic.transfer.config import TRANSFER_CONFIG as config
 
 # Импорт утилит
-from bot_logic.utils.utils import format_application_summary
+from oldbot.bot_logic.utils.utils import format_application_summary
 
 router = Router()
 logger = logging.getLogger(__name__)

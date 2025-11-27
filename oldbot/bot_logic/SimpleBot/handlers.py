@@ -1,4 +1,3 @@
-import json
 import logging
 from datetime import datetime
 import subprocess
@@ -10,9 +9,8 @@ from aiogram.types import (CallbackQuery, FSInputFile, Message)
 
 import keyboards
 import texts
-from db_functions import check_user_in_db, save_application_to_json
+from db_functions import save_application_to_json
 from fsm import ApplicationFSM
-from database.excel_manager import main
 
 router = Router()
 

@@ -1,8 +1,8 @@
 # bot_logic/admin/common/keyboards.py
 
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from aiogram.types import InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from bot_logic.utils.utils import _add_back_button # Можно использовать _add_back_button
+from oldbot.bot_logic.utils.utils import _add_back_button # Можно использовать _add_back_button
 
 def get_admin_main_menu_keyboard() -> InlineKeyboardMarkup:
     """Главное меню админки."""

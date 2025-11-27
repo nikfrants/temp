@@ -2,7 +2,7 @@
 
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from bot_logic.utils.utils import _add_back_button
+from oldbot.bot_logic.utils.utils import _add_back_button
 
 
 def get_admin_transfer_menu_keyboard() -> InlineKeyboardMarkup:

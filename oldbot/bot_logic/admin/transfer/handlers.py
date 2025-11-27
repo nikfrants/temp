@@ -2,26 +2,22 @@
 import logging
 
 from aiogram import Router, F
-from aiogram.types import Message, CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.fsm.context import FSMContext
-from aiogram.utils.markdown import hbold
 
 # Импорты для FSM
-from bot_logic.admin.transfer.fsm import AdminTransferFSM
-from bot_logic.admin.common.fsm import AdminCommonFSM  # Для возврата
+from oldbot.bot_logic.admin.transfer.fsm import AdminTransferFSM
 
 # Импорты для клавиатур
-from bot_logic.admin.transfer import keyboards as admin_transfer_kb
-from bot_logic.admin.common import keyboards as admin_common_kb  # Для админ главного меню
+from oldbot.bot_logic.admin.transfer import keyboards as admin_transfer_kb
 
 # Импорты для базы данных
-from database import db_stubs  # Пока используем общую заглушку
 
 # Импорт утилит
-from bot_logic.utils.utils import format_application_summary
+from oldbot.bot_logic.utils.utils import format_application_summary
 
 # Импорт конфигурации (для получения admin_ids)
-from bot_logic.transfer.config import TRANSFER_CONFIG
+from oldbot.bot_logic.transfer.config import TRANSFER_CONFIG
 
 router = Router()
 logger = logging.getLogger(__name__)

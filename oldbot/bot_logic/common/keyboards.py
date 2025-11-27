@@ -1,11 +1,9 @@
 # bot_logic/common/keyboards.py
-import json
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 # !!! ВАЖНО: Если ваш config.json находится в bot_logic/transfer/config.py
 # !!! тогда импорт должен быть такой:
-from bot_logic.transfer.config import TRANSFER_CONFIG as config # Алиас 'config' для удобства
 
 # Если ваш config.json находится в корне проекта или в другом месте,
 # раскомментируйте и настройте соответствующий путь:

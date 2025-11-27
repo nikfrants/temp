@@ -9,20 +9,18 @@ from aiogram.utils.markdown import hbold
 from aiogram.filters import StateFilter  # Добавляем импорт StateFilter
 
 # Import for FSM states
-from bot_logic.registration.fsm import RegistrationFSM
-from bot_logic.common.fsm import CommonFSM  # Для возврата в главное меню
-from bot_logic.transfer.fsm import \
-    TransferFSM  # Для возврата в сводку трансфера, если регистрация была инициирована оттуда
+from oldbot.bot_logic.registration.fsm import RegistrationFSM
+from oldbot.bot_logic.common.fsm import CommonFSM  # Для возврата в главное меню
 
 # Imports for keyboards
-from bot_logic.registration import keyboards as registration_kb
-from bot_logic.common import keyboards as common_kb  # Для главного меню
-from database import db_stubs
+from oldbot.bot_logic.registration import keyboards as registration_kb
+from oldbot.bot_logic.common import keyboards as common_kb
+from oldbot.database import db_stubs
 
 # ИМПОРТ НОВОГО КЛАССА ДЛЯ РАБОТЫ С БАЗОЙ КЛИЕНТОВ
-from database.clients_excel_db import ClientsExcelManager
+from oldbot.database.clients_excel_db import ClientsExcelManager
 # ИМПОРТ ФУНКЦИИ ИЗ TRANSFER_HANDLERS для возврата в сводку
-from bot_logic.transfer.handlers import show_final_summary  # Импортируем функцию show_final_summary
+from oldbot.bot_logic.transfer.handlers import show_final_summary  # Импортируем функцию show_final_summary
 
 # Инициализация менеджера базы клиентов. Путь к файлу жестко задан здесь.
 clients_db = ClientsExcelManager(file_path='database/data/clients.xlsx')

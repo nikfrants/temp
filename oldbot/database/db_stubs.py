@@ -5,7 +5,7 @@ import json
 import os
 from datetime import datetime
 from typing import Optional, Dict, Any
-from database.clients_excel_db import ClientsExcelManager # Импортируем наш новый класс
+from oldbot.database.clients_excel_db import ClientsExcelManager # Импортируем наш новый класс
 
 logger = logging.getLogger(__name__)
 clients_db = ClientsExcelManager(file_path='database/data/clients.xlsx')

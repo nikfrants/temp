@@ -2,11 +2,10 @@
 
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from bot_logic.utils.utils import _add_back_button # Убедитесь, что _add_back_button доступна
+from oldbot.bot_logic.utils.utils import _add_back_button # Убедитесь, что _add_back_button доступна
 from .config import TRANSFER_CONFIG # Импортируем из локального config.py
 from datetime import datetime # Для сортировки и форматирования дат
 import logging # Добавим логирование
-import re # Импортируем для работы с регулярными выражениями
 
 logger = logging.getLogger(__name__)
 

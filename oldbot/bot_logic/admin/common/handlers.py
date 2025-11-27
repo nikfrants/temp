@@ -2,19 +2,19 @@
 import logging
 
 from aiogram import Router, F
-from aiogram.types import Message, CallbackQuery
+from aiogram.types import CallbackQuery
 from aiogram.fsm.context import FSMContext
 
 # Импорты для FSM
-from bot_logic.admin.common.fsm import AdminCommonFSM
-from bot_logic.admin.transfer.fsm import AdminTransferFSM # Для перехода в управление трансферами
+from oldbot.bot_logic.admin.common.fsm import AdminCommonFSM
+from oldbot.bot_logic.admin.transfer.fsm import AdminTransferFSM # Для перехода в управление трансферами
 
 # Импорты для клавиатур
-from bot_logic.admin.common import keyboards as admin_common_kb
-from bot_logic.admin.transfer import keyboards as admin_transfer_kb # Для вызова меню трансферов
+from oldbot.bot_logic.admin.common import keyboards as admin_common_kb
+from oldbot.bot_logic.admin.transfer import keyboards as admin_transfer_kb # Для вызова меню трансферов
 
 # Импорт конфигурации (для получения admin_ids)
-from bot_logic.transfer.config import TRANSFER_CONFIG # Здесь мы берем admin_ids из общего конфига трансфера
+from oldbot.bot_logic.transfer.config import TRANSFER_CONFIG # Здесь мы берем admin_ids из общего конфига трансфера
 
 router = Router()
 logger = logging.getLogger(__name__)

@@ -1,9 +1,8 @@
 # bot_logic/registration/keyboards.py
 
-from aiogram.types import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup, \
-    ReplyKeyboardRemove  # Импортируем ReplyKeyboardRemove
+from aiogram.types import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup  # Импортируем ReplyKeyboardRemove
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-from bot_logic.utils.utils import _add_back_button  # Убедитесь, что _add_back_button доступна
+from oldbot.bot_logic.utils.utils import _add_back_button  # Убедитесь, что _add_back_button доступна
 
 
 def get_phone_number_keyboard() -> ReplyKeyboardMarkup:

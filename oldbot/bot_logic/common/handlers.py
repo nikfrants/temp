@@ -1,29 +1,26 @@
 # bot_logic/common/handlers.py
 from __future__ import annotations
 import logging
-import asyncio
 
 from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery
-from aiogram.filters import CommandStart, CommandObject, Command
+from aiogram.filters import CommandStart, Command
 from aiogram.fsm.context import FSMContext
-from aiogram.exceptions import TelegramBadRequest
 from aiogram.utils.markdown import hbold, hlink
 
 # Import for FSM states
-from bot_logic.common.fsm import CommonFSM
-from bot_logic.transfer.fsm import TransferFSM
-from bot_logic.registration.fsm import RegistrationFSM
+from oldbot.bot_logic.common.fsm import CommonFSM
+from oldbot.bot_logic.transfer.fsm import TransferFSM
+from oldbot.bot_logic.registration.fsm import RegistrationFSM
 
 # Imports for keyboards
-from bot_logic.common import keyboards as common_kb
-from bot_logic.registration import keyboards as registration_kb
+from oldbot.bot_logic.common import keyboards as common_kb
+from oldbot.bot_logic.registration import keyboards as registration_kb
 
 # Import TRANSFER_CONFIG (если он нужен для общих сообщений, иначе удалить)
-from bot_logic.transfer.config import TRANSFER_CONFIG as config
 
 # Imports for database
-from database import db_stubs
+from oldbot.database import db_stubs
 
 router = Router()
 logger = logging.getLogger(__name__)
